@@ -5012,6 +5012,7 @@ max-width:100%;
 min-height:90vh;
 padding-left:0px;
 padding-right:0px;
+/*margin-right:15px;*/
  }
 .jumbotron {
   /*margin-top : 10px;*/
@@ -5025,6 +5026,7 @@ padding-right:0px;
   background-color: #eeeeee;
   width :auto;
   position:relative;
+  max-width:100%;
 }
 
 .jumbotron h1 {
