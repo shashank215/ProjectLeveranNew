@@ -96,9 +96,7 @@ namespace ProjectLeveran.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
-            }
-            //return RedirectToLocal(returnUrl);
-            
+            }            
             if (UserManager.SmsService != null)
             {
                 var message = new IdentityMessage
@@ -118,10 +116,9 @@ namespace ProjectLeveran.Controllers
                 await UserManager.EmailService.SendAsync(message);
             }
 
-            ModelState.AddModelError("", "Invalid login attempt.");
+           // ModelState.AddModelError("", "Invalid login attempt.");
+            ViewBag.returnmessage = "Thanks for your interest. We will get back to you shortly.";
             return View(model);
-                   // return RedirectToLocal(returnUrl);
-          //  return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
         }
 
         private ActionResult RedirectToLocal(string returnUrl)

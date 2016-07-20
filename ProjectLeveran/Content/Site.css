@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+.is-success{
+    margin-left:10%;
+    margin-bottom:30px;
+    color:green;
+}

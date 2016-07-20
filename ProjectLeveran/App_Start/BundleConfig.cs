@@ -25,6 +25,7 @@ namespace ProjectLeveran
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/StickyNote.css",
                       "~/Content/site.css"));
         }
     }

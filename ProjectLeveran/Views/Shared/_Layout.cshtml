@@ -37,8 +37,19 @@
         </div>
     </div>
     <br />
-    @*<div id="footer" style="background-color: #d9b38c;width:100%;height:100%;display:inline-block;">*@
-        <div id="footer" style="background-color: #26734d;width:100%;height:100%;display:inline-block;padding-bottom:15px">
+    
+    <div class="sticky-popup right-bottom open_sticky_popup popup-content-bounce-in-up" id="CallBack" style="visibility: visible;">
+        <div class="popup-wrap">
+            <div class="popup-header" onclick="headerclick()">
+                <span class="popup-title">Instant Call Back</span>
+            </div>
+            <div class="popup-content">
+                    <button>button sub</button>
+                </div>
+        </div>
+        </div>
+        @*<div id="footer" style="background-color: #d9b38c;width:100%;height:100%;display:inline-block;">*@
+        <div id="footer" style="background-color: #26734d;width:100%;height:100%;display:inline-block;padding-bottom:40px">
             <footer>
                 <div>
                     <hr />
@@ -65,8 +76,28 @@
             </footer>
         </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+   
+     
+        <script type="text/javascript">
+            var contheight = jQuery(".popup-content").outerHeight() + 2;
+
+            jQuery(".sticky-popup").css("bottom", "-" + contheight + "px");
+            function headerclick() {
+                if (jQuery('.sticky-popup').hasClass("open")) {
+                    jQuery('.sticky-popup').removeClass("open");
+                    jQuery(".sticky-popup").css("bottom", "-" + contheight + "px");
+                }
+                else {
+                    jQuery('.sticky-popup').addClass("open");
+                    jQuery(".sticky-popup").css("bottom", 0);
+                }
+            }
+
+        </script>
+    
 </body>
 </html>
+
