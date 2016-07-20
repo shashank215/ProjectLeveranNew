@@ -65,25 +65,25 @@ namespace ProjectLeveran.Controllers
             if (!ModelState.IsValid)
             {
                 return View(model);
-            }            
-            //if (UserManager.SmsService != null)
-            //{
-            //    var message = new IdentityMessage
-            //    {
-            //        Destination = "+919819355066",
-            //        Body = model.Number +" This booked a service"
-            //    };
-            //    await UserManager.SmsService.SendAsync(message);
-            //}
-            //if (UserManager.EmailService  != null)
-            //{
-            //    var message = new IdentityMessage
-            //    {
-            //        Destination = "+919819355066",
-            //        Body = model.Number + " This booked a service"
-            //    };
-            //    await UserManager.EmailService.SendAsync(message);
-            //}
+            }
+            if (UserManager.SmsService != null)
+            {
+                var message = new IdentityMessage
+                {
+                    Destination = "+919819355066",
+                    Body = model.Number + " This booked a service"
+                };
+                await UserManager.SmsService.SendAsync(message);
+            }
+            if (UserManager.EmailService != null)
+            {
+                var message = new IdentityMessage
+                {
+                    Destination = "+919819355066",
+                    Body = model.Number + " This booked a service"
+                };
+                await UserManager.SmsService.SendAsync(message);
+            }
 
            // ModelState.AddModelError("", "Invalid login attempt.");
             ViewBag.returnmessage = "Thanks for your interest. We will get back to you shortly.";
