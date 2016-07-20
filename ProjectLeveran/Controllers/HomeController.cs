@@ -57,39 +57,8 @@ namespace ProjectLeveran.Controllers
             return View();
         }
 
-        //
-        // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-       // public async Task<ActionResult> Book(BookServiceViewModel model, string returnUrl)
-         public  ActionResult Book(BookServiceViewModel model, string returnUrl)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-             return RedirectToLocal(returnUrl);
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
-            //var result=SignInStatus.Success//=await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            //switch (result)
-            //{
-            //    case SignInStatus.Success:
-            //        return RedirectToLocal(returnUrl);
-            //    case SignInStatus.LockedOut:
-            //        return View("Lockout");
-            //    case SignInStatus.RequiresVerification:
-            //        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-            //    case SignInStatus.Failure:
-            //    default:
-            //        ModelState.AddModelError("", "Invalid login attempt.");
-            //        return View(model);
-            //}
-        }
-
-        [HttpPost]
-          [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> BookService(BookServiceViewModel model, string returnUrl)
         {
@@ -97,24 +66,24 @@ namespace ProjectLeveran.Controllers
             {
                 return View(model);
             }            
-            if (UserManager.SmsService != null)
-            {
-                var message = new IdentityMessage
-                {
-                    Destination = "+919819355066",
-                    Body = model.Number +" This booked a service"
-                };
-                await UserManager.SmsService.SendAsync(message);
-            }
-            if (UserManager.EmailService  != null)
-            {
-                var message = new IdentityMessage
-                {
-                    Destination = "+919819355066",
-                    Body = model.Number + " This booked a service"
-                };
-                await UserManager.EmailService.SendAsync(message);
-            }
+            //if (UserManager.SmsService != null)
+            //{
+            //    var message = new IdentityMessage
+            //    {
+            //        Destination = "+919819355066",
+            //        Body = model.Number +" This booked a service"
+            //    };
+            //    await UserManager.SmsService.SendAsync(message);
+            //}
+            //if (UserManager.EmailService  != null)
+            //{
+            //    var message = new IdentityMessage
+            //    {
+            //        Destination = "+919819355066",
+            //        Body = model.Number + " This booked a service"
+            //    };
+            //    await UserManager.EmailService.SendAsync(message);
+            //}
 
            // ModelState.AddModelError("", "Invalid login attempt.");
             ViewBag.returnmessage = "Thanks for your interest. We will get back to you shortly.";
