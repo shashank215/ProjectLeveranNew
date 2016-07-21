@@ -71,6 +71,7 @@
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/jqueryval")
         @RenderSection("scripts", required: false)
    
      
@@ -98,12 +99,12 @@
                     success: function (data) {
                         if (data.success) {
                             $("#lblSuccess").css("display", "block");
-                            $("#lblerror").css("display", "none");
+                            //$("#lblerror").css("display", "none");
                         }
                         else {
                             $("#lblSuccess").css("display", "none");
-                            $("#lblerror").text(data.error);
-                            $("#lblerror").css("display", "block");
+                            //$("#lblerror").text(data.error);
+                            //$("#lblerror").css("display", "block");
                         }
                     },
                     error: function (req, status, error) {
