@@ -64,8 +64,19 @@
     max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 250px;
+    height: 300px;
     background-color: #fefefe;
     border: 1px solid hsl(0, 0%, 92%);
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:10px;
 }
 
+.popup-control{
+    margin-bottom:15px;
+}
+.btn-popup {
+    width: 200px;
+    margin-left: 35px;
+    background-color: rgb(20, 185, 213);
+}

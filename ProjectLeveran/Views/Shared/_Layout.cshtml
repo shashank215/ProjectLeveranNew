@@ -22,9 +22,9 @@
                         <ul class="nav navbar-nav" style="padding-top: 10px">
                             <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
                             <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>
-                            <li class="">@Html.ActionLink("Services", "Services", "Home")</li>
+                            @*<li class="">@Html.ActionLink("Services", "Services", "Home")</li>*@
                             <li class="">@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li class="">@Html.ActionLink("About", "About", "Home")</li>
+                            <li class="">@Html.ActionLink("About Us", "About", "Home")</li>
                         </ul>
                         @Html.Partial("_LoginPartial")
                     </div>
@@ -39,24 +39,7 @@
     <br />
     
     <div class="sticky-popup right-bottom open_sticky_popup popup-content-bounce-in-up" id="CallBack" style="visibility: visible;">
-        <div class="popup-wrap">
-            <div class="popup-header" onclick="headerclick()">
-                <span class="popup-title">Instant Call Back</span>
-            </div>
-            <div class="popup-content">
-                <div class="form-control control-background">
-                    @Html.TextBox("Name")
-                 
-                </div>
-                <div class="form-control control-background">
-                    @Html.TextBox("Number")
-                </div>
-
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Submit" class="btn btn-default" />
-                    </div>
-                </div>
-        </div>
+        @Html.Partial("_StickyNote")
         </div>
         
         <div id="footer" style="background-color: #26734d;width:100%;height:100%;display:inline-block;padding-bottom:40px">
@@ -105,7 +88,32 @@
                     jQuery(".sticky-popup").css("bottom", 0);
                 }
             }
+            var frm = $('#contactForm1');
+            
+             frm.submit(function (ev) {
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: frm.serialize(),
+                    success: function (data) {
+                        if (data.success) {
+                            $("#lblSuccess").css("display", "block");
+                            $("#lblerror").css("display", "none");
+                        }
+                        else {
+                            $("#lblSuccess").css("display", "none");
+                            $("#lblerror").text(data.error);
+                            $("#lblerror").css("display", "block");
+                        }
+                    },
+                    error: function (req, status, error) {
+                        debugger;
+                        alert("Oops! Something went wrong. Please try again later or call us .");
+                    }
+                });
 
+                ev.preventDefault();
+            });
         </script>
     
 </body>

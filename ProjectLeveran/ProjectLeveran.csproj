@@ -186,6 +186,7 @@
     <Content Include="Resources\Images\Flash.jpg" />
     <Content Include="Resources\Images\google-plus.svg" />
     <Content Include="Resources\Images\Header-Logo.png" />
+    <Content Include="Resources\Images\HowItWorks.jpg" />
     <Content Include="Resources\Images\icon_phone_small.png" />
     <Content Include="Resources\Images\instagram.svg" />
     <Content Include="Resources\Images\LeveranLogo.jpg" />
@@ -256,6 +257,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\BookService.cshtml" />
+    <Content Include="Views\Shared\_StickyNote.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

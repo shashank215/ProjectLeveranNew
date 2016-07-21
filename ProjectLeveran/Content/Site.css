@@ -27,3 +27,9 @@ textarea {
     margin-bottom:30px;
     color:green;
 }
+
+.is-error{
+     margin-left:10%;
+    margin-bottom:30px;
+    color:red;
+}
