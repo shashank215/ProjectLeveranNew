@@ -126,6 +126,34 @@ namespace ProjectLeveran.Controllers
             return Json(new { success = true });
         }
 
+
+         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ContactUs(BookServiceViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var allErrors = ModelState.Values.SelectMany(v => v.Errors);
+                string errorlist = "";
+                foreach (ModelError error in allErrors)
+                {
+                     errorlist = error.ErrorMessage;
+                }
+                return Json(new { error = errorlist });
+            }
+            if (UserManager.EmailService != null)
+            {
+                var message = new IdentityMessage
+                {
+                    Destination = "+919819355066",
+                    Body = model.Number + " This booked a service"
+                };
+                await UserManager.SmsService.SendAsync(message);
+            }
+            return Json(new { success = true });
+        }
+
         private ActionResult RedirectToLocal(string returnUrl)
         {
             if (Url.IsLocalUrl(returnUrl))

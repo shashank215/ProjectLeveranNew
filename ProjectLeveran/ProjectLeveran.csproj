@@ -181,11 +181,13 @@
     <Content Include="Resources\Images\banner4.jpg" />
     <Content Include="Resources\Images\banner5.jpg" />
     <Content Include="Resources\Images\banner6.jpg" />
+    <Content Include="Resources\Images\ContactDetails.jpg" />
     <Content Include="Resources\Images\download.jpg" />
     <Content Include="Resources\Images\facebook.svg" />
     <Content Include="Resources\Images\Flash.jpg" />
     <Content Include="Resources\Images\google-plus.svg" />
     <Content Include="Resources\Images\Header-Logo.png" />
+    <Content Include="Resources\Images\Headphones.jpg" />
     <Content Include="Resources\Images\HowItWorks.jpg" />
     <Content Include="Resources\Images\icon_phone_small.png" />
     <Content Include="Resources\Images\instagram.svg" />
@@ -259,6 +261,7 @@
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\BookService.cshtml" />
     <Content Include="Views\Shared\_StickyNote.cshtml" />
+    <Content Include="Views\Shared\_ContactForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
