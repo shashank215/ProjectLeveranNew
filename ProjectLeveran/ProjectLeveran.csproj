@@ -189,6 +189,7 @@
     <Content Include="Resources\Images\HowItWorks.jpg" />
     <Content Include="Resources\Images\icon_phone_small.png" />
     <Content Include="Resources\Images\instagram.svg" />
+    <Content Include="Resources\Images\leveran.png" />
     <Content Include="Resources\Images\LeveranLogo.jpg" />
     <Content Include="Resources\Images\linkedin.svg" />
     <Content Include="Resources\Images\LOGO.jpg" />
