@@ -85,6 +85,22 @@ Leave out the burden to shop, collect items and fulfilling smaller tasks on us. 
 <div id="ServicesRow" style="text-align:center;margin-bottom:30px">
     <h1><u><b>Testimonials</b></u></h1>
 </div>
+<div class="row" style="margin-bottom:20px;text-align:center">
+    <ul id="testimonials">
+        <li class="testimonials">
+            <q>This is the best delivery service</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Shashank Sachan</a></p>
+        </li>
+        <li class="testimonials">
+            <q>We appreciate the help from Leverans</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
+        </li>
+        <li class="testimonials">
+            <q>Leverans are the best we have worked with</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
+        </li>
+    </ul>
+</div>
 
     @section scripts{
         <script type="text/javascript">
@@ -107,7 +123,6 @@ Leave out the burden to shop, collect items and fulfilling smaller tasks on us. 
             function plusDivs(n) {
                 showDivs(slideIndex += n);
             }
-
             function showDivs(n) {
                 var i;
                 var x = document.getElementsByClassName("SlideShow");
@@ -118,5 +133,18 @@ Leave out the burden to shop, collect items and fulfilling smaller tasks on us. 
                 }
                 x[slideIndex - 1].style.display = "block";
             }
+
+    $(function(){
+        var items = (Math.floor(Math.random() * ($('#testimonials li').length)));
+        $('#testimonials li').hide().eq(items).show();
+	
+        function next(){
+            $('#testimonials li:visible').delay(3000).fadeOut('slow',function(){
+                $(this).appendTo('#testimonials ul');
+                $('#testimonials li:first').fadeIn('slow',next);
+            });
+        }
+        next();
+    });
         </script>
     }

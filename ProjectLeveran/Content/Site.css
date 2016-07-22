@@ -69,3 +69,27 @@ textarea {
     float:left;
     margin-left:15px;
 }
+
+.testimonials{
+    font-size:30px;
+    font-style:italic;
+    font-family:Brush Script MT;
+    color:#808080;
+    display:none;
+}
+.testimonials>q:before{
+    content: open-quote;
+}
+
+.testimonials>q::after { 
+    content: close-quote;
+}
+
+.testimonials p.author {
+    color: #009890;
+    font-size: 20px;
+    font-style: italic;
+    font-family:Brush Script MT;
+    text-align: center;
+    margin: 10px;
+}
