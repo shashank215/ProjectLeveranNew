@@ -3,28 +3,36 @@
 }
 <div class="body-wrapper">
     <div class="body-content">
-        <div style="text-align:center"> 
+        <div style="text-align:center">
             <h2><img src="~/Resources/Images/Headphones.jpg" style="width:40px;height:40px;"> @ViewBag.Message</h2>
         </div>
-        <div style="position:page; margin-top:20px;">
-            <div id="leftdiv" class="col-md-6">
-                <div style="color:#8f2323;" class="body-content">
-                    <img src="~/Resources/Images/ContactDetails.jpg" >
-                </div>
+        <div style="margin-top:20px;">
+            <table>
+                <tr>
+                    <td>
+                        <div id="leftdiv" class="col-md-12 contact-form">
+                            <div style="color:#8f2323;" class="contact-form">
+                                <img src="~/Resources/Images/ContactDetails.jpg">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="rightdiv" class="col-md-12 contact-form" style="float:right">
+                            @Html.Partial("_ContactForm")
+                        </div>
+                    </td>
+                </tr>
+            </table>          
             </div>
-          
-            <div id="rightdiv" class="col-md-6">
-                @Html.Partial("_ContactForm")
-            </div>
+    </div>
 
-        </div>
-            <br />
-            <br />
-            <p>For any queries or complains please reach out to us at-</p>
-            <address>
-                <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a>
-            </address>
-        </div>
+    <div style="padding-top:50px;position:page " class="body-content">
+        <p>For any queries or complains please reach out to us at-</p>
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a>
+        </address>
+    </div>
+       
 </div>
 @section Scripts{
 <script type="text/javascript">
