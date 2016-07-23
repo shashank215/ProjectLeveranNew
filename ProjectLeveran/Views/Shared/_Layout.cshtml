@@ -10,14 +10,14 @@
 </head>
 <body style="height:100%;width:100%;background-image:url(/Resources/Images/background_image.jpg);min-width:1200px">
     <div id="body">
-            <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0052cc;">
-                <div id="Header-Logo" style="float:left;padding-top: 25px;padding-left:25px;position:absolute">
+            <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0052cc;min-width:1200px">
+                <div id="Header-Logo" style="float:left;padding-top: 25px;padding-left:25px;position:absolute;" class="navbar-collapse collapse">
                     <a href='@Url.Action("Index", "Home", new { area = "" })'>
-                        <img src='@Url.Content("~/Resources/Images/Leveran.png")' style="width:120px;height:60px;padding-bottom:5px;"  class="box-shadow"/>
+                        <img src='@Url.Content("~/Resources/Images/Leveran.png")' style="width:120px;height:60px;padding-bottom:5px;" class="box-shadow" />
                     </a>
                 </div>
                 <div class="container">
-                    <div class="navbar-collapse collapse">
+                    <div class="navbar-collapse" style="min-width: 1200px"">
                         <ul class="nav navbar-nav" style="padding-top: 10px">
                             <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
                             <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>

@@ -3888,6 +3888,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  float:left;
 }
 
 .nav > li > a:hover,
@@ -4152,7 +4153,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-collapse {
-  max-height: 340px;
+  /*max-height: 340px;*/
+  max-height: 50px;
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
