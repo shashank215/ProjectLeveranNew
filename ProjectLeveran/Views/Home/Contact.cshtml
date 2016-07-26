@@ -7,13 +7,13 @@
             <h2><img src="~/Resources/Images/Headphones.jpg" style="width:40px;height:40px;"> @ViewBag.Message</h2>
         </div>
         <div style="margin-top:20px;">
-            <div id="leftdiv" class="col-md-6 contact-form">
-                <div style="color:#8f2323;" class="contact-form">
+            <div id="leftdiv" class="col-md-6" @*contact-form*@>
+                <div style="color:#8f2323;text-align:center" @*class="contact-form"*@ >
                     <img src="~/Resources/Images/ContactDetails.jpg" class="img-responsive">
                 </div>
             </div>
 
-            <div id="rightdiv" class="col-md-6 contact-form" @*style="float:right"*@>
+            <div id="rightdiv" class="col-md-6"  @*contact-form*@ @*style="float:right"*@>
                 @Html.Partial("_ContactForm")
             </div>
 

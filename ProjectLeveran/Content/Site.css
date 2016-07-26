@@ -58,11 +58,11 @@ textarea {
     background-color:#ffe6cc;
 }
 
-.contact-button{
+/*.contact-button{
     width: 200px;
     float:left;
     margin-left:25%;
-}
+}*/
 
 .contact-success{
     width:100%;
@@ -93,7 +93,7 @@ textarea {
     text-align: center;
     margin: 10px;
 }
-.contact-form{
-    /*padding-left: 40px;
-    padding-right: 40px;*/
-}
+/*.contact-form{
+    padding-left: 40px;
+    padding-right: 40px;
+}*/

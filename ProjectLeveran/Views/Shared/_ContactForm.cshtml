@@ -1,8 +1,8 @@
 ﻿@using ProjectLeveran.Models
 @model ContactViewModel
 
-<div class="contact-form">
-    <div style="color:#8f2323;" class="contact-form">
+<div @*class="contact-form"*@>
+    <div style="color:#8f2323;" @*class="contact-form"*@>
         <h3><b>We would love to hear from you!</b></h3>
     </div>
     <section id="secfeedbackForm">
@@ -20,8 +20,8 @@
                 @Html.TextAreaFor(m => m.Thoughts, new { @class = "form-control control-background textareathoughts", @placeholder = "I gotta say" })
                 @Html.ValidationMessageFor(m => m.Thoughts, "", new { @class = "text-danger" })
             </div>
-            <div>
-                <input type="submit" value="Let us know" class="btn btn-default contact-button" />
+            <div class="col-md-10" style="text-align:center">
+                <input type="submit" value="Let us know" class="btn btn-default" @*contact-button*@ />
             </div>
 
             <div>
