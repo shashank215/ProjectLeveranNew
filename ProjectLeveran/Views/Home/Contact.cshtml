@@ -2,31 +2,25 @@
     ViewBag.Title = "Contact";
 }
 <div class="body-wrapper">
-    <div class="body-content">
+    <div class="body-content col-md-12">
         <div style="text-align:center">
             <h2><img src="~/Resources/Images/Headphones.jpg" style="width:40px;height:40px;"> @ViewBag.Message</h2>
         </div>
         <div style="margin-top:20px;">
-            <table>
-                <tr>
-                    <td>
-                        <div id="leftdiv" class="col-md-12 contact-form">
-                            <div style="color:#8f2323;" class="contact-form">
-                                <img src="~/Resources/Images/ContactDetails.jpg">
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="rightdiv" class="col-md-12 contact-form" style="float:right">
-                            @Html.Partial("_ContactForm")
-                        </div>
-                    </td>
-                </tr>
-            </table>          
+            <div id="leftdiv" class="col-md-6 contact-form">
+                <div style="color:#8f2323;" class="contact-form">
+                    <img src="~/Resources/Images/ContactDetails.jpg" class="img-responsive">
+                </div>
             </div>
+
+            <div id="rightdiv" class="col-md-6 contact-form" @*style="float:right"*@>
+                @Html.Partial("_ContactForm")
+            </div>
+
+        </div>
     </div>
 
-    <div style="padding-top:50px;position:page " class="body-content">
+    <div style="padding-top:50px;position:page" class="body-content col-md-12">
         <p>For any queries or complains please reach out to us at-</p>
         <address>
             <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a>
