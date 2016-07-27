@@ -8,9 +8,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body style="height:100%;width:100%;background-image:url(/Resources/Images/background_image.jpg);">
+<body style="height:100%;width:100%;background-image:url(/Resources/Images/background_image.jpg);" >
     <div id="body">
-        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0052cc;">
+        <div class="navbar navbar-inverse col-md-12" @*navbar-fixed-top*@ style="background-color:#0052cc;">
             @*<button class="navbar-toggle collapsed" aria-expanded="false" type="button" data-toggle="collapse" data-target="#nav-option">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="fa fa-bars"></span>
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class=" body-full container">
+        <div class=" body-full container col-md-12">
             <div id="bodyPage" style="width:100%">
                 @RenderBody()
             </div>
