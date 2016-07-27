@@ -181,6 +181,8 @@
     <Content Include="Resources\Images\banner4.jpg" />
     <Content Include="Resources\Images\banner5.jpg" />
     <Content Include="Resources\Images\banner6.jpg" />
+    <Content Include="Resources\Images\cape.ico" />
+    <Content Include="Resources\Images\cape.png" />
     <Content Include="Resources\Images\ContactDetails.jpg" />
     <Content Include="Resources\Images\download.jpg" />
     <Content Include="Resources\Images\facebook.svg" />
