@@ -10,25 +10,29 @@
 </head>
 <body style="height:100%;width:100%;background-image:url(/Resources/Images/background_image.jpg);">
     <div id="body">
-            <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0052cc;">
-                <div id="Header-Logo" style="float:left;padding-top: 25px;padding-left:25px;position:absolute;" class="navbar-collapse collapse">
-                    <a href='@Url.Action("Index", "Home", new { area = "" })'>
-                        <img src='@Url.Content("~/Resources/Images/Leveran.png")' style="width:120px;height:60px;padding-bottom:5px;" class="box-shadow" />
-                    </a>
-                </div>
-                <div class="container">
-                    <div class="navbar-collapse">
-                        <ul class="nav navbar-nav" style="padding-top: 10px">
-                            <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>
-                            @*<li class="">@Html.ActionLink("Services", "Services", "Home")</li>*@
-                            <li class="">@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li class="">@Html.ActionLink("About Us", "About", "Home")</li>
-                        </ul>
-                        @Html.Partial("_LoginPartial")
-                    </div>
+        <div class="navbar navbar-inverse" @*navbar-fixed-top*@ style="background-color:#0052cc;">
+            @*<button class="navbar-toggle collapsed" aria-expanded="false" type="button" data-toggle="collapse" data-target="#nav-option">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>*@
+            <div id="Header-Logo" style="float:left;padding-top: 25px;padding-left:25px;position:absolute;" class="navbar-collapse collapse">
+                <a href='@Url.Action("Index", "Home", new { area = "" })'>
+                    <img src='@Url.Content("~/Resources/Images/Leveran.png")' style="width:120px;height:60px;padding-bottom:5px;" class="box-shadow img-responsive" />
+                </a>
+            </div>
+            <div class="container">
+                <div class="navbar-collapse" id="nav-option">
+                    <ul class="nav navbar-nav" style="padding-top: 10px">
+                        <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>
+                        @*<li class="">@Html.ActionLink("Services", "Services", "Home")</li>*@
+                        <li class="">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li class="">@Html.ActionLink("About Us", "About", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
                 </div>
             </div>
+        </div>
         <div class=" body-full container">
             <div id="bodyPage" style="width:100%">
                 @RenderBody()
