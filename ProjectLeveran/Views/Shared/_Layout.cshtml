@@ -11,27 +11,41 @@
 <body style="height:100%;width:100%;background-image:url(/Resources/Images/background_image.jpg);" >
     <div id="body">
         <div class="navbar navbar-inverse col-md-12" @*navbar-fixed-top*@ style="background-color:#0052cc;">
-            @*<button class="navbar-toggle collapsed" aria-expanded="false" type="button" data-toggle="collapse" data-target="#nav-option">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="fa fa-bars"></span>
-            </button>*@
-            <div id="Header-Logo" style="float:left;padding-top: 25px;padding-left:25px;position:absolute;" class="navbar-collapse collapse">
-                <a href='@Url.Action("Index", "Home", new { area = "" })'>
-                    <img src='@Url.Content("~/Resources/Images/Leveran.png")' style="width:120px;height:60px;padding-bottom:1px;" class="box-shadow img-responsive" />
-                </a>
-            </div>
-            <div class="container">
-                <div class="navbar-collapse" id="nav-option">
-                    <ul class="nav navbar-nav" style="padding-top: 10px">
-                        <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>
-                        @*<li class="">@Html.ActionLink("Services", "Services", "Home")</li>*@
-                        <li class="">@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li class="">@Html.ActionLink("About Us", "About", "Home")</li>
-                    </ul>
-                    @Html.Partial("_LoginPartial")
+            <div @*class="container"*@ style="margin-left:20px;margin-right:40px;max-height:50px">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" onclick="showMenu()" aria-expanded="false" type="button" data-toggle="collapse" data-target="#nav-option" style="margin-left:-3px;margin-right:3px;padding-left:5px;padding-right:5px;height:27px;border-color:transparent;float:left;background-color:transparent">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div id="Header-Logo" class="navbar-collapse collapse" @*class="navbar-brand"*@ style="float:left;padding-top:25px;position:absolute;">
+                        @*padding-left:25px*@
+                        <a href='@Url.Action("Index", "Home", new { area = "" })'>
+                            <img src='@Url.Content("~/Resources/Images/Leveran.png")' style="width:120px;height:60px;padding-bottom:1px;" class="box-shadow img-responsive" />
+                        </a>
+                    </div>
+               </div>   
+                    <div class="navbar-collapse collapse" style="margin-left:150px">
+                        <ul class="nav navbar-nav" style="padding-top: 10px">
+                            <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>
+                            @*<li class="">@Html.ActionLink("Services", "Services", "Home")</li>*@
+                            <li class="">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li class="">@Html.ActionLink("About Us", "About", "Home")</li>
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                    <div class="menu-toggle">
+                    <div class="hide" id="nav-option" style="background-color:#0052cc;padding-left:15px;overflow-y:auto;">
+                        <ul class="navbar-nav" @*nav*@ style="padding-top: 10px;float:left">
+                            <li class="">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="">@Html.ActionLink("Book", "BookService", "Home")</li>
+                            <li class="">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li class="">@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li class="">@Html.ActionLink("Call: +91 7387350555", "Index", "Home")</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+             </div>
         </div>
         <div class=" body-full container col-md-12">
             <div id="bodyPage" style="width:100%">
@@ -79,6 +93,17 @@
    
      
         <script type="text/javascript">
+           
+            function showMenu() {
+                if (jQuery("#nav-option").hasClass("showmenu")) {
+                    jQuery("#nav-option").removeClass("showmenu");
+                    jQuery("#nav-option").addClass("hide");
+                }
+                else {
+                    jQuery("#nav-option").removeClass("hide");
+                    jQuery("#nav-option").addClass("showmenu");
+                }
+            }
             var contheight = jQuery(".popup-content").outerHeight() + 2;
 
             jQuery(".sticky-popup").css("bottom", "-" + contheight + "px");

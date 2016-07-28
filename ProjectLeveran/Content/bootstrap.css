@@ -760,8 +760,8 @@ pre code {
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  /*margin-right: auto;
+  margin-left: auto;*/ /*testankita*/
 }
 
 .container:before,
@@ -4306,6 +4306,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
+  }
+  .menu-toggle{
+      display: none;
   }
 }
 
