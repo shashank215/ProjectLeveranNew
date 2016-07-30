@@ -83,15 +83,19 @@ Leave out the burden to shop, collect items and fulfilling smaller tasks on us. 
 <div class="row" style="margin-bottom:20px;text-align:center">
     <ul id="testimonials">
         <li class="testimonials">
-            <q>This is the best delivery service,and i am delighted to have it in my life.</q>
+            <q>Leverans has completely surpassed my expectations.Thanks for the great service.</q>
             <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Shashank Sachan</a></p>
         </li>
         <li class="testimonials">
-            <q>We appreciate the help from Leverans</q>
+            <q>Thanks to you I now have more time with my kids.</q>
             <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
         </li>
         <li class="testimonials">
-            <q>Leverans are the best we have worked with</q>
+            <q>Really a great service that you guys are providing.Simplified my life so much.</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
+        </li>
+        <li class="testimonials">
+            <q>Leverans has become a part of my routine to get my daily things done.</q>
             <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
         </li>
     </ul>
@@ -129,17 +133,17 @@ Leave out the burden to shop, collect items and fulfilling smaller tasks on us. 
                 x[slideIndex - 1].style.display = "block";
             }
 
-    $(function(){
-        var items = (Math.floor(Math.random() * ($('#testimonials li').length)));
-        $('#testimonials li').hide().eq(items).show();
-	
-        function next(){
-            $('#testimonials li:visible').delay(3000).fadeOut('slow',function(){
-                $(this).appendTo('#testimonials ul');
-                $('#testimonials li:first').fadeIn('slow',next);
+            $(function () {
+                var items = (Math.floor(Math.random() * ($('#testimonials li').length)));
+                $('#testimonials li').hide().eq(items).show();
+
+                function next() {
+                    $('#testimonials li:visible').delay(3000).fadeOut('slow', function () {
+                        $(this).appendTo('#testimonials');
+                        $('#testimonials li:first').fadeIn('slow', next);
+                    });
+                }
+                next();
             });
-        }
-        next();
-    });
         </script>
     }
