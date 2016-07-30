@@ -64,7 +64,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2016 18:16:36</publishTime>
     </File>
     <File Include="bin/ProjectLeveran.dll">
-      <publishTime>06/26/2016 14:02:21</publishTime>
+      <publishTime>07/30/2016 12:06:06</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>06/03/2016 18:16:31</publishTime>
@@ -91,7 +91,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2016 18:16:32</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>06/26/2016 14:00:17</publishTime>
+      <publishTime>07/29/2016 02:41:22</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
       <publishTime>06/03/2016 18:16:30</publishTime>
@@ -100,7 +100,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2016 22:57:59</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>06/26/2016 03:42:20</publishTime>
+      <publishTime>07/29/2016 01:31:32</publishTime>
+    </File>
+    <File Include="Content/StickyNote.css">
+      <publishTime>07/22/2016 21:57:18</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>06/03/2016 18:16:28</publishTime>
@@ -123,6 +126,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="packages.config">
       <publishTime>06/03/2016 18:16:37</publishTime>
     </File>
+    <File Include="Resources/Images/background_image.jpg">
+      <publishTime>07/01/2016 01:31:05</publishTime>
+    </File>
     <File Include="Resources/Images/banner.jpg">
       <publishTime>06/25/2016 17:21:57</publishTime>
     </File>
@@ -130,10 +136,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/25/2016 18:50:45</publishTime>
     </File>
     <File Include="Resources/Images/banner2.jpg">
-      <publishTime>06/25/2016 17:29:04</publishTime>
+      <publishTime>06/26/2016 21:15:03</publishTime>
     </File>
     <File Include="Resources/Images/banner3.jpg">
       <publishTime>06/25/2016 17:29:27</publishTime>
+    </File>
+    <File Include="Resources/Images/banner4.jpg">
+      <publishTime>06/28/2016 17:52:21</publishTime>
+    </File>
+    <File Include="Resources/Images/banner5.jpg">
+      <publishTime>07/19/2016 23:27:14</publishTime>
+    </File>
+    <File Include="Resources/Images/banner6.jpg">
+      <publishTime>07/20/2016 00:01:05</publishTime>
+    </File>
+    <File Include="Resources/Images/cape.ico">
+      <publishTime>07/27/2016 23:51:36</publishTime>
+    </File>
+    <File Include="Resources/Images/cape.png">
+      <publishTime>07/27/2016 23:51:36</publishTime>
+    </File>
+    <File Include="Resources/Images/ContactDetails.jpg">
+      <publishTime>07/22/2016 22:54:49</publishTime>
     </File>
     <File Include="Resources/Images/download.jpg">
       <publishTime>06/04/2016 20:46:37</publishTime>
@@ -144,11 +168,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Resources/Images/family.jpg">
       <publishTime>06/03/2016 19:14:18</publishTime>
     </File>
+    <File Include="Resources/Images/Flash.jpg">
+      <publishTime>06/27/2016 22:31:21</publishTime>
+    </File>
     <File Include="Resources/Images/google-plus.svg">
       <publishTime>06/22/2016 15:40:18</publishTime>
     </File>
     <File Include="Resources/Images/Header-Logo.png">
       <publishTime>06/25/2016 22:09:15</publishTime>
+    </File>
+    <File Include="Resources/Images/Headphones.jpg">
+      <publishTime>07/22/2016 22:25:04</publishTime>
+    </File>
+    <File Include="Resources/Images/HowItWorks.jpg">
+      <publishTime>07/21/2016 23:45:15</publishTime>
     </File>
     <File Include="Resources/Images/icon_phone_small.png">
       <publishTime>06/04/2016 19:16:41</publishTime>
@@ -156,14 +189,32 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Resources/Images/instagram.svg">
       <publishTime>06/22/2016 15:40:18</publishTime>
     </File>
+    <File Include="Resources/Images/leveran.png">
+      <publishTime>07/22/2016 15:28:36</publishTime>
+    </File>
+    <File Include="Resources/Images/LeveranLogo.jpg">
+      <publishTime>07/01/2016 00:47:00</publishTime>
+    </File>
     <File Include="Resources/Images/linkedin.svg">
       <publishTime>06/22/2016 15:40:18</publishTime>
+    </File>
+    <File Include="Resources/Images/LOGO.jpg">
+      <publishTime>06/25/2016 20:05:54</publishTime>
     </File>
     <File Include="Resources/Images/LOGO.png">
       <publishTime>06/25/2016 20:05:54</publishTime>
     </File>
     <File Include="Resources/Images/phone.jpg">
       <publishTime>06/04/2016 19:20:51</publishTime>
+    </File>
+    <File Include="Resources/Images/Services.jpg">
+      <publishTime>06/26/2016 16:57:03</publishTime>
+    </File>
+    <File Include="Resources/Images/Shopping.gif">
+      <publishTime>06/26/2016 20:28:21</publishTime>
+    </File>
+    <File Include="Resources/Images/Tasks.gif">
+      <publishTime>06/26/2016 18:49:29</publishTime>
     </File>
     <File Include="Resources/Images/TitleLogo.ico">
       <publishTime>06/25/2016 21:30:44</publishTime>
@@ -250,13 +301,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/03/2016 18:16:33</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>06/04/2016 21:03:20</publishTime>
+      <publishTime>07/22/2016 16:41:36</publishTime>
+    </File>
+    <File Include="Views/Home/BookService.cshtml">
+      <publishTime>07/21/2016 23:40:00</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>06/06/2016 16:46:59</publishTime>
+      <publishTime>07/27/2016 00:59:08</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>06/26/2016 14:00:23</publishTime>
+      <publishTime>07/27/2016 21:58:24</publishTime>
+    </File>
+    <File Include="Views/Home/Services.cshtml">
+      <publishTime>06/28/2016 18:22:08</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>06/03/2016 18:16:34</publishTime>
@@ -282,11 +339,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/Lockout.cshtml">
       <publishTime>06/03/2016 18:16:34</publishTime>
     </File>
+    <File Include="Views/Shared/_ContactForm.cshtml">
+      <publishTime>07/27/2016 00:52:06</publishTime>
+    </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>06/26/2016 03:50:18</publishTime>
+      <publishTime>07/29/2016 02:44:42</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>06/04/2016 21:49:28</publishTime>
+      <publishTime>07/29/2016 00:54:34</publishTime>
+    </File>
+    <File Include="Views/Shared/_StickyNote.cshtml">
+      <publishTime>07/21/2016 22:48:23</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>06/03/2016 18:16:28</publishTime>

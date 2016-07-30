@@ -162,4 +162,3 @@ C:\Users\anprabha\Documents\Visual Studio 2013\Projects\ProjectLeveran\ProjectLe
 C:\Users\anprabha\Documents\Visual Studio 2013\Projects\ProjectLeveran\ProjectLeveran\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\anprabha\Documents\Visual Studio 2013\Projects\ProjectLeveran\ProjectLeveran\obj\Debug\ProjectLeveran.dll
 C:\Users\anprabha\Documents\Visual Studio 2013\Projects\ProjectLeveran\ProjectLeveran\obj\Debug\ProjectLeveran.pdb
-C:\Users\anprabha\Documents\Visual Studio 2013\Projects\ProjectLeveran\ProjectLeveran\obj\Debug\ProjectLeveran.csprojResolveAssemblyReference.cache

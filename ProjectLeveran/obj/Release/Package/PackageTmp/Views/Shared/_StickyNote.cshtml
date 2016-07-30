@@ -1,0 +1,33 @@
+﻿@using ProjectLeveran.Models
+@model BookServiceViewModel
+<div class="popup-wrap">
+    <div class="popup-header" onclick="headerclick()">
+        <span class="popup-title">Instant Call Back</span>
+    </div>
+    <div class="popup-content">
+        <section id="loginForm">
+            <form id="contactForm1" action="/Home/BookServiceAjax" method="post">
+                @Html.AntiForgeryToken()
+                <div class="popup-control">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control control-background ", @placeholder = "Name" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="popup-control">
+                    @Html.TextBoxFor(m => m.Number, new { @class = "form-control control-background popup-control", @placeholder = "Mobile Number" })
+                    @Html.ValidationMessageFor(m => m.Number, "", new { @class = "text-danger" })
+                </div>
+                <div class="popup-control">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control control-background popup-control", @placeholder = "Email" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    <input type="submit" value="Submit" class="btn btn-default popup-control btn-popup" />
+                </div>
+                <div>
+                    <label class="is-success" style="display:none" id="lblSuccess">We will get back to you Shortly.</label>
+                    <label class="is-error" style="display:none" id="lblerror"></label>
+                </div>
+            </form>
+</section>
+    </div>
+</div>

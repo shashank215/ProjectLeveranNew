@@ -1,56 +1,145 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
-<script>
-    var slideIndex = 1;
-    //showDivs(slideIndex);
 
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("SlideShow");
-        if (n > x.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = x.length }
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex - 1].style.display = "block";
-    }
-</script>
-<style >
-   
-</style>
 <div class="jumbotron">
-    <img class="SlideShow" src="~/Resources/Images/banner.jpg" style="display:block ">
-    <img class="SlideShow" src="~/Resources/Images/banner1.jpg">
-    <img class="SlideShow" src="~/Resources/Images/banner3.jpg">
+    <a style="cursor:pointer;" href="~/Home/BookService">
+        <img class="SlideShow" src="~/Resources/Images/banner2.jpg">
+        <img class="SlideShow" src="~/Resources/Images/banner3.jpg">
+        <img class="SlideShow" src="~/Resources/Images/banner5.jpg">
+        <img class="SlideShow" src="~/Resources/Images/banner6.jpg">
+    </a>
     <a class="w3-btn-floating" style="top:45%;left:0" onclick="plusDivs(-1)">❮</a>
     <a class="w3-btn-floating" style="top:45%;right:0" onclick="plusDivs(1)">❯</a>
-    @*<h1>Leveran</h1>
-        <h2> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Hire a Help...</h2>*@
+</div>
+<br />
+<div>
+    <hr />
+</div>
+<br />
+<div id="ServicesRow" style="text-align:center;margin-bottom:30px">
+    <h1><u><b>What We Do</b></u></h1>
+</div>
+<div class="row" style="margin-bottom:20px">
+    <div class="col-md-4 col-md-4-border">
+        <h3>Shopping and Delivery</h3>
+        <pre>Everyone doesn’t find shopping exciting and easy, especially after office hours .We are here to help you buy things from your preferred places ranging from groceries to USB cables and deliver them to your doorstep.
+              </pre>
+        @*<p><a class="btn btn-default" href="~/Home/Services#Home_Delivery" style="margin-left:33%">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4 col-md-4-border">
+        <h3>Food Delivery</h3>
+        <pre>Missing the yummy delicacies from your favourite restaurant? Or craving for some munching bites for your party. Let us know whatever you want, because only we understand your heart's cravings.
+               </pre>
+        @*<p><a class="btn btn-default" href="~/Home/Services#Errands_Service" style="margin-left:33%">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4 col-md-4-border">
+        <h3>Pick and Drop Services</h3>
+        <pre>Forgot home keys in office and realized it after reaching home ? Don’t worry, just book a service with us and our errand runner with superhuman speed is already on the go.
+                </pre>
+        @*<p><a class="btn btn-default " href="~/Home/Services#Home_Delivery" style="margin-left:33%">Learn more &raquo;</a></p>*@
+    </div>
+</div>
+<br />
+<br />
+<div class="row" style="margin-bottom:20px">
+    <div class="col-md-4 col-md-4-border">
+        <h3>Party Errands</h3>
+        <pre>Smaller tasks consume most of our time in party planning.
+Leave out the burden to shop, collect items and fulfilling smaller tasks on us. Host your party with ease and style and greet your guests with a smile.
+           </pre>
+        @*<p><a class="btn btn-default" href="~/Home/Services#Home_Delivery" style="margin-left:33%">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4 col-md-4-border">
+        <h3>Repair\Return\Exchange</h3>
+        <pre>The due date on library books or exchanging defective products from shops is no longer a cause of worry. Hire our errand runners  to make returns and exchanges whenever time is short for you.
+               </pre>
+        @*<p><a class="btn btn-default" href="~/Home/Services#Errands_Service" style="margin-left:33%">Learn more &raquo;</a></p>*@
+    </div>
+    <div class="col-md-4 col-md-4-border">
+        <h3>Monthly\Daily Errands</h3>
+        <pre>Is your electricity bill due date tomorrow? Or you have to deposit a Demand Draft?  Or collect a courier? We are happy to help. Save your precious time for more productive things in life.
+              </pre>
+        @*<p><a class="btn btn-default " href="~/Home/Services#Home_Delivery" style="margin-left:33%">Learn more &raquo;</a></p>*@
+    </div>
+</div>
+<div>
+    <hr />
+</div>
+<br />
+<div id="ServicesRow" style="text-align:center;margin-bottom:30px">
+    <h1><u><b>How It Works</b></u></h1>
+</div>
+<div class="row" style="margin-bottom:20px;text-align:center">
+    <img src="~/Resources/Images/HowItWorks.jpg" class="body-content img-responsive">
+</div>
+<div>
+    <hr />
+</div>
+<br />
+<div id="ServicesRow" style="text-align:center;margin-bottom:30px">
+    <h1><u><b>Testimonials</b></u></h1>
+</div>
+<div class="row" style="margin-bottom:20px;text-align:center">
+    <ul id="testimonials">
+        <li class="testimonials">
+            <q>This is the best delivery service,and i am delighted to have it in my life.</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Shashank Sachan</a></p>
+        </li>
+        <li class="testimonials">
+            <q>We appreciate the help from Leverans</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
+        </li>
+        <li class="testimonials">
+            <q>Leverans are the best we have worked with</q>
+            <p class="author"><a href="https://www.facebook.com/ankita.prabha" target="_blank">-Ankita Prabha</a></p>
+        </li>
+    </ul>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    @section scripts{
+        <script type="text/javascript">
+            var slideIndex = 1;
+            $(document).ready(function () {
+                slideIndex = 1;
+                carousel();
+            });
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("SlideShow");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) { slideIndex = 1 }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000); // Change image every 4 seconds
+            }
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("SlideShow");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+
+    $(function(){
+        var items = (Math.floor(Math.random() * ($('#testimonials li').length)));
+        $('#testimonials li').hide().eq(items).show();
+	
+        function next(){
+            $('#testimonials li:visible').delay(3000).fadeOut('slow',function(){
+                $(this).appendTo('#testimonials ul');
+                $('#testimonials li:first').fadeIn('slow',next);
+            });
+        }
+        next();
+    });
+        </script>
+    }

@@ -1,0 +1,32 @@
+﻿@using ProjectLeveran.Models
+@model ContactViewModel
+
+<div @*class="contact-form"*@>
+    <div style="color:#8f2323;" @*class="contact-form"*@>
+        <h3><b>We would love to hear from you!</b></h3>
+    </div>
+    <section id="secfeedbackForm">
+        <form id="feedbackForm" action="/Home/ContactUs" method="post" style="position:page">
+            @Html.AntiForgeryToken()
+            <div class="col-md-5 popup-control">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control contact-background", @placeholder = "I'm called" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-5 popup-control">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control contact-background", @placeholder = "Mail me at" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-10 popup-control">
+                @Html.TextAreaFor(m => m.Thoughts, new { @class = "form-control control-background textareathoughts", @placeholder = "I gotta say" })
+                @Html.ValidationMessageFor(m => m.Thoughts, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-10" style="text-align:center">
+                <input type="submit" value="Let us know" class="btn btn-default" @*contact-button*@ />
+            </div>
+
+            <div>
+                <label class="is-success contact-success" style="display:none" id="lblfeedbackSuccess">Thanks for your feedback. :)</label>
+            </div>
+        </form>
+    </section>
+</div>
