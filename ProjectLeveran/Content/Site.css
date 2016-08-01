@@ -128,3 +128,34 @@ textarea {
     padding-bottom:0px!important;
 }
 
+.content-box {
+    border: solid;
+    border-radius: 10px;
+    border-color: #4dae53;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.content-box h3 {
+        color: white;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: #4dae53;
+    }
+
+.center-text{
+    text-align:center;
+}
+
+.about{
+    background-color:white;
+    border:ridge;
+    margin-top:20px;
+    margin-left:10%;
+    margin-right:10%;
+    padding-top:2%;
+    padding-bottom:2%;
+}
