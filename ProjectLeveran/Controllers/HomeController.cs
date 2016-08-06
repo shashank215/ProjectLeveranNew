@@ -33,7 +33,7 @@ namespace ProjectLeveran.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "We run your errands while you do more important things in life.";
+            ViewBag.Message = "We run your errands while you do more important things in life";
 
             return View();
         }
