@@ -109,8 +109,8 @@ namespace ProjectLeveran.Controllers
             {
                 var message = new IdentityMessage
                 {
-                    Destination = "+919819355066",
-                    Body = model.Number + " This booked a service"
+                    Subject = "new booking" + model.Number,
+                    Body = model.Number + " This booked a service,instant call back request " 
                 };
                 await UserManager.SmsService.SendAsync(message);
             }
@@ -118,10 +118,10 @@ namespace ProjectLeveran.Controllers
             {
                 var message = new IdentityMessage
                 {
-                    Destination = "+919819355066",
-                    Body = model.Number + " This booked a service"
+                    Subject = "new booking-instant call back request-" + model.Number,
+                    Body = model.Number + " This booked a service, instant call back request, mail id- " + model.Email 
                 };
-                await UserManager.SmsService.SendAsync(message);
+                await UserManager.EmailService.SendAsync(message);
             }
             return Json(new { success = true });
         }
@@ -146,10 +146,10 @@ namespace ProjectLeveran.Controllers
             {
                 var message = new IdentityMessage
                 {
-                    Destination = "+919819355066",
-                    Body = model.Number + " This booked a service"
+                    Subject = "new booking-" + model.Number,
+                    Body = model.Number + " This booked a service, mail id- " + model.Email 
                 };
-                await UserManager.SmsService.SendAsync(message);
+                await UserManager.EmailService.SendAsync(message);
             }
             return Json(new { success = true });
         }

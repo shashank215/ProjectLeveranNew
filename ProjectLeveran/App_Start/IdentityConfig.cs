@@ -12,6 +12,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using ProjectLeveran.Models;
 using System.Net.Mail;
+using System.Configuration;
 
 namespace ProjectLeveran
 {
@@ -19,8 +20,11 @@ namespace ProjectLeveran
     {
         public Task SendAsync(IdentityMessage message)
         {
-            string host = "mail.glbsnet.com";
-            string port = "25";
+            string host = ConfigurationManager.AppSettings["mailhost"];
+            string port = ConfigurationManager.AppSettings["mailport"];
+            string fromId = ConfigurationManager.AppSettings["fromId"]; ;
+            string pwd = ConfigurationManager.AppSettings["pwd"];
+            string mailTo = ConfigurationManager.AppSettings["mailTo"];
 
             if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(port))
             {
@@ -29,22 +33,32 @@ namespace ProjectLeveran
             
 
             // Instantiate a new instance of MailMessage
-            using (MailMessage mMailMessage = new MailMessage())
+            try
             {
-                mMailMessage.From = new MailAddress("test@test.com");
-                mMailMessage.To.Add(new MailAddress("ankita.prabha@gmail.com"));
-              
-           
-                mMailMessage.Subject = "test mail";
-                mMailMessage.Body = "test mail1111";
-                mMailMessage.Priority = MailPriority.Normal;
-                
-                SmtpClient mSmtpClient = new SmtpClient();
-                mSmtpClient.Host = host;
-                mSmtpClient.Port =25;
+                using (MailMessage mMailMessage = new MailMessage())
+                {
+                    mMailMessage.From = new MailAddress(fromId);
+                    mMailMessage.To.Add(new MailAddress(mailTo));
+
+
+                    mMailMessage.Subject = message.Subject;
+                    mMailMessage.Body = message.Body;
+                  // mMailMessage.Priority = MailPriority.Normal;
+                    mMailMessage.IsBodyHtml = true;
+                    SmtpClient mSmtpClient = new SmtpClient();
+                    mSmtpClient.UseDefaultCredentials = false; 
+                   // mSmtpClient.DeliveryMethod = SmtpDeliveryMethod.Network ;
+                    mSmtpClient.Host = host;
+                    mSmtpClient.Port = Int32.Parse(port);
+                    mSmtpClient.Credentials = new System.Net.NetworkCredential(fromId, pwd);
                     mSmtpClient.Send(mMailMessage);
-               
-                return Task.FromResult(0);
+                    return Task.FromResult(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                string a = ex.Message;
+                return Task.FromResult(1);
             }
 
             //return Task.FromResult(1);
