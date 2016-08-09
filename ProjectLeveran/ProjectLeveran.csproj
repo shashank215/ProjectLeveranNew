@@ -186,6 +186,7 @@
     <Content Include="Resources\Images\banner_5.jpg" />
     <Content Include="Resources\Images\banner_6.jpg" />
     <Content Include="Resources\Images\banner_old.jpg" />
+    <Content Include="Resources\Images\BookinImg.jpg" />
     <Content Include="Resources\Images\cape.ico" />
     <Content Include="Resources\Images\cape.png" />
     <Content Include="Resources\Images\ContactDetails.jpg" />
