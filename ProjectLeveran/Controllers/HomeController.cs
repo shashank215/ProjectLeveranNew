@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace ProjectLeveran.Controllers
 {
+    [OutputCacheAttribute(VaryByParam = "*", Duration = 0, NoStore = true)] // will be applied to all actions in MyController, unless those actions override with their own decoration
     public class HomeController : Controller
     {
         private ApplicationUserManager _userManager;
