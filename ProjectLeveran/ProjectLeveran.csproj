@@ -185,6 +185,7 @@
     <Content Include="Resources\Images\banner_4.jpg" />
     <Content Include="Resources\Images\banner_5.jpg" />
     <Content Include="Resources\Images\banner_6.jpg" />
+    <Content Include="Resources\Images\banner_Mumbai.jpg" />
     <Content Include="Resources\Images\banner_old.jpg" />
     <Content Include="Resources\Images\BookinImg.jpg" />
     <Content Include="Resources\Images\cape.ico" />
