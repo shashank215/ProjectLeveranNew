@@ -61,7 +61,10 @@
     <div class="sticky-popup right-bottom open_sticky_popup popup-content-bounce-in-up" id="CallBack" style="visibility: visible;">
         @Html.Partial("_StickyNote")
     </div>
-
+    <div id="popup">
+        <img src="~/Resources/Images/Mumbai_Soon.jpg" class="img-responsive promotionPopUp" />
+        <a class="popup-close" id="modalClose" style="top:1%;right:0" onclick="closemodal()">[X]</a>
+    </div>
     <div id="footer" style="background-color: #26734d;width:100%;height:100%;display:inline-block;padding-bottom:40px">
         <footer>
             <div>
@@ -96,7 +99,18 @@
 
 
     <script type="text/javascript">
+        $(document).ready(function () {
+            $("#popup").dialog({
+                modal: true,
+                dialogClass: 'popUpContainer',
+                height:300,
+                width:600
+            });
+        });
 
+        function closemodal() {
+            $("#popup").dialog('close');
+        }
         function showMenu() {
             if (jQuery("#nav-option").hasClass("showmenu")) {
                 jQuery("#nav-option").removeClass("showmenu");

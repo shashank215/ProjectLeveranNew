@@ -166,3 +166,50 @@ textarea {
     padding-top:2%;
     padding-bottom:2%;
 }
+.popUpContainer{
+    padding: 0px 0px 0px 0px!important ;
+    margin: 0px 0px 0px 0px!important ;
+    z-index: 101;
+    top:20%;
+    left:10%;
+    right:10%;
+    height:auto!important;
+    width:auto;
+    background-color :transparent;
+    border:none;
+    overflow:visible;
+    max-width:70%;
+
+}
+.ui-dialog-titlebar { display: none }
+
+.ui-dialog .ui-dialog-content {
+    border: 0;
+    background: none;
+    overflow:visible;
+    padding: 0px 0px 0px 0px ;
+}
+
+.promotionPopUp{
+    border-radius: 16px;
+    border-color: black;
+    border:ridge;
+}
+
+.popup-close {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: absolute;
+}
+.popup-close {
+    line-height: 40px;
+}
+/*.popup-close:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0);
+    }*/
